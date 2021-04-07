@@ -28,7 +28,7 @@ class PosTextSize {
   static const size7 = PosTextSize.internal(7);
   static const size8 = PosTextSize.internal(8);
 
-  static int decSize(PosTextSize height, PosTextSize width) =>
+  static dynamic decSize(PosTextSize height, PosTextSize width) =>
       16 * (width.value - 1) + (height.value - 1);
 
   static dynamic customSize(dynamic height, dynamic width) {
