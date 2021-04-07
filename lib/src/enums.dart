@@ -18,7 +18,7 @@ enum PosImageFn { bitImageRaster, graphics }
 
 class PosTextSize {
   const PosTextSize.internal(this.value);
-  final int value;
+  final dynamic value;
   static const size1 = PosTextSize.internal(1);
   static const size2 = PosTextSize.internal(2);
   static const size3 = PosTextSize.internal(3);
