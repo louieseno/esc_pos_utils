@@ -17,26 +17,26 @@ enum PosDrawer { pin2, pin5 }
 enum PosImageFn { bitImageRaster, graphics }
 
 class PosTextSize {
-  const PosTextSize._internal(this.value);
+  const PosTextSize.internal(this.value);
   final int value;
-  static const size1 = PosTextSize._internal(1);
-  static const size2 = PosTextSize._internal(2);
-  static const size3 = PosTextSize._internal(3);
-  static const size4 = PosTextSize._internal(4);
-  static const size5 = PosTextSize._internal(5);
-  static const size6 = PosTextSize._internal(6);
-  static const size7 = PosTextSize._internal(7);
-  static const size8 = PosTextSize._internal(8);
+  static const size1 = PosTextSize.internal(1);
+  static const size2 = PosTextSize.internal(2);
+  static const size3 = PosTextSize.internal(3);
+  static const size4 = PosTextSize.internal(4);
+  static const size5 = PosTextSize.internal(5);
+  static const size6 = PosTextSize.internal(6);
+  static const size7 = PosTextSize.internal(7);
+  static const size8 = PosTextSize.internal(8);
 
-  static int decSize(dynamic height, dynamic width) =>
+  static int decSize(PosTextSize height, PosTextSize width) =>
       16 * (width.value - 1) + (height.value - 1);
 
   static dynamic customSize(dynamic height, dynamic width) {
     try {
       final newSize = decSize(height, width);
       print(newSize);
-      print(PosTextSize._internal(newSize));
-      return PosTextSize._internal(newSize);
+      print(PosTextSize.internal(newSize));
+      return PosTextSize.internal(newSize);
     } catch (e) {
       print(e);
       print('ERROR TEXT SIZE');
