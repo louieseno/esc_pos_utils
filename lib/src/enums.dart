@@ -28,8 +28,20 @@ class PosTextSize {
   static const size7 = PosTextSize._internal(7);
   static const size8 = PosTextSize._internal(8);
 
-  static int decSize(PosTextSize height, PosTextSize width) =>
+  static int decSize(dynamic height, dynamic width) =>
       16 * (width.value - 1) + (height.value - 1);
+
+  static dynamic customSize(dynamic height, dynamic width) {
+    try {
+      final newSize = decSize(height, width);
+      print(newSize);
+      print(PosTextSize._internal(newSize));
+      return PosTextSize._internal(newSize);
+    } catch (e) {
+      print(e);
+      print('ERROR TEXT SIZE');
+    }
+  }
 }
 
 class PaperSize {
